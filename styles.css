@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* scroll bar */
+::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: dimgray;
+}
+
+/* main content */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: ivory;
+    margin: auto;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accountDiv, .centered, .playerID, .robotID, .resultStatusParent, .gameResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputForm, .postForm, .accountMisc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cleanP {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.centered, .charName {
+    margin: 5px 0;
+}
+
+.accountDivP {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.playerSide, .robotSide {
+    display: flex;
+}
+
+.RPSSelectPlayer {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    margin-left: 8px;
+    box-shadow: 5px 3px 0 black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: deepskyblue;
+}
+
+.RPSSelectPlayer:active {
+    user-select: none;
+    position: relative;
+    box-shadow: 0 0 0 black;
+    top: 3px;
+    left: 5px;
+}
+
+.RPSSelectEnemy {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    margin-left: 8px;
+    box-shadow: 5px 3px 0 black;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: crimson;
+}
+
+.RPSSelectPlayer:hover {
+    cursor: pointer;
+}
+
+.RPSSelectEnemy:hover {
+    user-select: none;
+    pointer-events: none;
+}
+
+.viewLeaderboard {
+    user-select: none;
+    background-color: darkseagreen;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 3px 0 black;
+    margin-bottom: 5px;
+}
+
+.viewLeaderboard:hover {
+    user-select: none;
+    cursor: pointer;
+}
+
+.viewLeaderboard:active {
+    position: relative;
+    user-select: none;
+    top: 3px;
+    left: 5px;
+    box-shadow: 0 0 0 black;
+}
+
+.gameResult {
+    margin-top: 15px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: snow;
+}
+
+/* modal */
+.modalBackground {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modalDisplay {
+    height: 650px;
+    width: 400px;
+    background-color: honeydew;
+    opacity: 100%;
+    margin: auto;
+    margin-top: 125px;
+    border: 1px solid black;
+    box-shadow: 5px 3px 0px black;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.modalContent, .refreshButtonParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-wrap: break-word;
+}
+
+.modalExitButton {
+    position: relative;
+    left: 45%;
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.modalExitButton:hover {
+    cursor: pointer;
+}
+
+.modalExitButton:active {
+    background-color: rgb(123, 157, 168);
+    user-select: none;
+}
+
+.refreshLeaderboardButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: darkseagreen;
+    user-select: none;
+    box-shadow: 5px 3px 0px black;
+    margin: 15px 0;
+}
+
+.refreshLeaderboardButton:hover {
+    cursor: pointer;
+}
+
+.refreshLeaderboardButton:active {
+    position: relative;
+    top: 3px;
+    left: 5px;
+    box-shadow: 0 0 0 black;
+}
+
+.leaderBoardItem {
+    margin: 25px;
+}
+
+#loggedScore {
+    user-select: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .modalDisplay {
+        height: 80%;
+        width: 80%;
+        margin-top: 20px;
+    }
+}
